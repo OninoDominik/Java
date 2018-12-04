@@ -10,6 +10,7 @@ package first;
  * @author campus
  */
 public class Point {
+    
     private int x;
     private int y;
     private static int Ox =0;
@@ -21,6 +22,7 @@ public class Point {
     this.y=y;
     this.nbrInstance++;
     }
+    
     public int getX(){
         return this.x;
 }
@@ -36,4 +38,9 @@ public class Point {
     static public int getNbrInstance(){
         return nbrInstance;
 }
+
+    @Override
+    public String toString() {
+        return "Point{" + "x=" + x + ", y=" + y + '}';
+    }
 }

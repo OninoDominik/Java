@@ -13,6 +13,6 @@ public class Voeux {
     public static void main(String[] args) {
     int annee = 2016;
     System.out.print("Meilleurs voeux\n");
-    System.out.println("pour le nouvel an " + annee);
+    System.out.println("pour le nouvel an " + annee);   
   }
 }

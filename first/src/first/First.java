@@ -22,6 +22,7 @@ Point a=new Point (-5, -2);
 Point b=new Point (2, 3);
 
 Point c=new Point (6, 0);
+
 System.out.println("x de a "+ a.getX());
 System.out.println("y de a "+ a.getY());
 System.out.println("x de b "+ b.getX());
@@ -32,5 +33,6 @@ System.out.println("0x= "+ Point.getOx());
 System.out.println("0y= "+ Point.getOy());
 System.out.println("Nbr d'instance = "+ Point.getNbrInstance());
     }
+    
     
 }
