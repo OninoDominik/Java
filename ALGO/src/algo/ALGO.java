@@ -108,28 +108,56 @@ public class ALGO
 //                }
 //        }
         
-        int n;
+        
+   //     Question 4
+//        int n;
+//        n=Clavier.readInt();
+//        
+//        {for(int j=0;j<n;j++)
+//        {System.out.print("*");}
+//        System.out.print("\n");
+//         for(int k=0;k<n-2;k++)
+//         {System.out.print("*");
+//            for(int l=0;l<n-2;l++)
+//                {System.out.print("-");}
+//            
+//        System.out.println("*");
+//         
+//                 
+//        
+//                }
+//        }
+//        for(int j=0;j<n;j++)
+//        {System.out.print("*");
+//       }
+//        System.out.println("");
+        
+        //Question 5
+         int n;
         n=Clavier.readInt();
         
-        {for(int j=0;j<n;j++)
+        for(int j=0;j<n-1;j++)
+        {System.out.print("-");}
         {System.out.print("*");}
-        System.out.print("\n");
-         for(int k=0;k<n-2;k++)
-         {System.out.print("*");
-            for(int l=0;l<n-2;l++)
-                {System.out.print("-");}
-            
-        System.out.println("*");
+         for(int j=0;j<n-1;j++)
+        {System.out.print("-");}
+        System.out.println(""); 
+        for(int k=0;k<n-2;k++)
+        {for(int j=0;j<n-(2+k);j++)
+        {System.out.print("-");}
          
-                 
-        
-                }
-        }
-        for(int j=0;j<n;j++)
-        {System.out.print("*");
-       }
-        System.out.println("*");
-        
-    }
+        {System.out.print("*");}
+        for(int j=0;j<2*k+1;j++)
+        {System.out.print("-");}
+        {System.out.print("*");}
+         for(int j=0;j<n-k-2;j++)
+        {System.out.print("-");}
+        System.out.println("");  }
+         for(int j=0;j<2*n-1;j++)
+         {System.out.print("*");}
+         System.out.println("");
     
+   
 }
+}
+
