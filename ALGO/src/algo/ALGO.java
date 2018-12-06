@@ -135,27 +135,29 @@ public class ALGO
         //Question 5
          int n;
         n=Clavier.readInt();
+        int j;
+        int k;
         
-        for(int j=0;j<n-1;j++)         // 1ere ligne
+        for( j=0;j<n-1;j++)         // 1ere ligne
             {System.out.print("-");}
         {System.out.print("*");}
-            for(int j=0;j<n-1;j++)
+            for( j=0;j<n-1;j++)
             {System.out.print("-");}
         System.out.println(""); 
 
-        for(int k=0;k<n-2;k++) // les x lignes du milieu
-        {   for(int j=0;j<n-2-k;j++)
+        for( k=0;k<n-2;k++) // les x lignes du milieu
+        {   for( j=0;j<n-2-k;j++)
                 {System.out.print("-");}
             {System.out.print("*");}
-            for(int j=0;j<2*k+1;j++)
+            for( j=0;j<2*k+1;j++)
                 {System.out.print("-");}
             {System.out.print("*");}
-            for(int j=0;j<n-k-2;j++)
+            for( j=0;j<n-k-2;j++)
                 {System.out.print("-");}
             System.out.println("");  
         }
         
-         for(int j=0;j<2*n-1;j++) //la derniere lignes
+         for( j=0;j<2*n-1;j++) //la derniere lignes
             {System.out.print("*");}
          System.out.println("");
          
