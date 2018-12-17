@@ -9,14 +9,12 @@ package algo;
  *
  * @author campus
  */
-public class ALGO 
-{
+public class ALGO {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) 
-    {
+    public static void main(String[] args) {
         // TODO code application logic here
 //        double temperature=0;
 //        
@@ -36,9 +34,7 @@ public class ALGO
 //                {
 //                    System.out.println("Liquide"); 
 //                }
-            
-             
-        
+
 //        double nbr=0;
 //        System.out.println("entrer un nombre");
 //        nbr=Clavier.readDouble();
@@ -51,8 +47,6 @@ public class ALGO
 //                {
 //                System.out.println("Positif");  
 //                }
-        
-        
 //        double chiffre1;
 //        double chiffre2;
 //        double chiffre3;
@@ -84,7 +78,6 @@ public class ALGO
 //             chiffre3=temp;
 //             }
 //        System.out.println(chiffre1 + " , "+ chiffre2 + " , " + chiffre3);
-        
 //        double A,B,C,D,resultat;
 //        System.out.println("entrer le nombre A ");
 //        A=Clavier.readDouble();
@@ -107,9 +100,7 @@ public class ALGO
 //                    { resultat=B-C;}
 //                }
 //        }
-        
-        
-   //     Question 4
+        //     Question 4
 //        int n;
 //        n=Clavier.readInt();
 //        
@@ -131,38 +122,136 @@ public class ALGO
 //        {System.out.print("*");
 //       }
 //        System.out.println("");
-        
-        //Question 5
-         int n;
-        n=Clavier.readInt();
-        int j;
-        int k;
-        
-        for( j=0;j<n-1;j++)         // 1ere ligne
-            {System.out.print("-");}
-        {System.out.print("*");}
-            for( j=0;j<n-1;j++)
-            {System.out.print("-");}
-        System.out.println(""); 
+        //Question 6
+//         int n;
+//        n=Clavier.readInt();
+//        int j;
+//        int k;
+//        
+//        for( j=0;j<n-1;j++)         // 1ere ligne
+//            {System.out.print("-");}
+//        {System.out.print("*");}
+//            for( j=0;j<n-1;j++)
+//            {System.out.print("-");}
+//        System.out.println(""); 
+//
+//        for( k=0;k<n-2;k++) // les x lignes du milieu
+//        {   for( j=0;j<n-2-k;j++)
+//                {System.out.print("-");}
+//            {System.out.print("*");}
+//            for( j=0;j<2*k+1;j++)
+//                {System.out.print("-");}
+//            {System.out.print("*");}
+//            for( j=0;j<n-k-2;j++)
+//                {System.out.print("-");}
+//            System.out.println("");  
+//        }
+//        
+//         for( j=0;j<2*n-1;j++) //la derniere lignes
+//            {System.out.print("*");}
+//         System.out.println("");
+//         
+//    
+//   j=0;
+//   k=0;
+//   int i=0;
+//   int x=0;
+//   int y=0;
+//   double m=0;
+//   m=n;
+//   for(y=0;y<n;y++)
+//   {
+//   for(i=y%2;i<n+y%2;i++)
+//   {
+//       j=0;
+//      k=0;
+//   for(k=0+i%2;k<n+i%2;k++)
+//   {
+//       
+//       for(j=k;j%2>0;j++)
+//   {
+//        for(x=0;x<n;x++)
+//       {
+//       {System.out.print("+");}
+//       }
+//       }
+//   for(j=k;j%2<1;j++)
+//   {
+//       for(x=0;x<n;x++)
+//       {
+//       {System.out.print("*");}
+//       }
+//       }
+//   
+//   }
+//   
+//   
+//   System.out.println("");
+//   }
+//    
+//   
+//}
+//for(y=0;y<n;y++)
+//{
+//for(x=1;x<=n*n;x++)
+//{for(y=x%(2*n);y%(2*n)<n;y++)
+//    {
+//for(i=0;i<n;i++)
+//{
+//    for(j=i%2;j%2<1;j++)
+//    {for(k=0;k<n;k++)
+//    {
+//        System.out.print("*");
+//    }
+//    }
+//    for(j=i%2;j%2>0;j++)
+//    {for(k=0;k<n;k++)
+//    {
+//        System.out.print("z");
+//    }
+//    }
+//{
+//    
+//}
+//}
+//System.out.println("");
+//}
+//}
+        double note = 1;
+        double moyenne = 0;
+        double min=20;
+        double max=0;
+        int tailleTableau = 1;
+        System.out.println("Entrer la taille du tableau  :");
+        tailleTableau = Clavier.readInt();
 
-        for( k=0;k<n-2;k++) // les x lignes du milieu
-        {   for( j=0;j<n-2-k;j++)
-                {System.out.print("-");}
-            {System.out.print("*");}
-            for( j=0;j<2*k+1;j++)
-                {System.out.print("-");}
-            {System.out.print("*");}
-            for( j=0;j<n-k-2;j++)
-                {System.out.print("-");}
-            System.out.println("");  
+        double[] tab = new double[tailleTableau];
+        int i = 0;
+
+        do {
+            do {
+                System.out.println("Entrer une Note (entre 0 et 20) :");
+                note = Clavier.readDouble();
+            } while (note > 20 || note < 0);
+            tab[i] = note;
+            i++;
+        } while (i < tailleTableau);
+
+        for (int j = 0; j < tailleTableau; j++) {
+            if (min>tab[j])
+            {
+                min=tab[j];
+            }
+            if (max<tab[j])
+            {
+                max=tab[j];
+            }
+            moyenne = moyenne + tab[j];
         }
-        
-         for( j=0;j<2*n-1;j++) //la derniere lignes
-            {System.out.print("*");}
-         System.out.println("");
-         
-    
-   
-}
-}
 
+        moyenne = moyenne / tab.length;
+        System.out.println("la moyenne est :" + moyenne);
+        System.out.println("Min : " + min + "Max : "+ max);
+    }
+
+}
